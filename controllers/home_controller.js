@@ -20,15 +20,15 @@ module.exports.home = function(req, res){
                 path:'user'
             }
         }
-    ).
-    exec(function(err, posts){
+    )
+    .exec(function(err, posts){
         User.find({},function(errr,users){
             return res.render('home', {
                 title: "Codeial | Home",
                 posts:  posts,
                 all_users:users
             });
-        })
+        });
 
     })
 
